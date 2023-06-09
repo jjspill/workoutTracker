@@ -1,0 +1,157 @@
+body{
+    /*background-image: url('images/black_background.png');*/
+    background-color: #181818;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+header{
+    height: 20%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+}
+.userInfo{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    align-items: center;
+    padding-right: 40px;
+}
+#headerButton{
+    height: 50%;
+    font-size: 40px;
+    background-color: rgb(191, 191, 191);
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+#headerButton:hover, #headerButton:focus{
+    font-weight: bold;
+    background-color: white;
+}
+
+footer{
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    bottom: 0px;
+    background-color: grey;
+}
+#profilePicture{
+    /*position: fixed;*/
+    height: 75%;
+    background-color: rgb(191, 191, 191);
+    border-radius: 75px;
+    aspect-ratio: 1/1;
+}
+#profilePicture:hover, #profilePicture:focus{
+    height: 80%;
+}
+#username{
+    font-size: 40px;
+    padding-left: 20px;
+    text-align: center;
+    color: white;
+}
+#username:hover, #username:focus{
+    font-weight: bold;
+}
+
+.overallStreak{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+}
+.calendar{
+    width: 25%;
+    text-align: center;
+    background-color: grey;
+    height: 150%;
+    display: none;
+}
+.streak{
+    width: 100%;
+}
+.streak>p{
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+.streakGrid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-items: center;
+}
+#streakDay{
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    border: 2px solid rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.statistics{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+    margin-top: 50px;
+}
+.weight{
+    background-color: rgb(191, 191, 191);
+    border-radius: 15px;
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 25px;
+    padding: 0px 5px;
+}
+#weightChartTitle, #maxSelection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.maxes{
+    background-color: rgb(191, 191, 191);
+    border-radius: 15px;
+    padding: 0px 5px;
+    width: 50%;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#benchMax, #squatMax, #deadliftMax{
+    width: 100%;
+}
+#squatMax, #deadliftMax{
+    display: none;
+}
+
+.addWeightPopup{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    background-color: lightgrey;
+    border: 2px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 2px 2px;
+}
+.addWeightPopup > *{
+    float: none;
+}
+#weightNum{
+    width: 60%;
+}
+#addWeightEnter, #addWeightCancel{
+    margin-top: 5px;
+}
